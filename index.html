@@ -7,20 +7,30 @@
   <meta name="author" content="Lesedi Pride Iketleng">
   <title>WDD 131 – Dynamic Web Fundamentals – Lesedi Pride Iketleng</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css">
+
+  <!-- JS -->
   <script src="scripts/getdates.js" defer></script>
 </head>
-
 <body>
   <header>
     <nav>
-      <a href="https://www.linkedin.com/in/lesedi-iketleng-44069135b">LinkedIn</a>
-      <a href="https://byupw.instructure.com/">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng">Scripture</a>
+      <a href="https://www.linkedin.com/in/lesedi-iketleng-44069135b"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://byupw.instructure.com/"><i class="fas fa-graduation-cap"></i> Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng"><i class="fas fa-book"></i> Scripture</a>
       <a href="#">Final Project</a>
+      <a href="https://twitter.com"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://facebook.com"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
     </nav>
     <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
   </header>
@@ -35,30 +45,27 @@
       <img class="fade-in delay-2" src="images/profile_image.jpg" alt="Photo of Lesedi Pride Iketleng">
     </section>
 
-    <!-- About Me Section (slightly distinct background) -->
+    <!-- About Me Section -->
     <section class="about">
       <h2>About Me</h2>
       <p>
-        Hi, I’m Lesedi Pride Iketleng. I’m 19 years old and from South Africa, where I was born and raised.
-        I’m currently studying Software Development at BYU–Idaho. I enjoy designing websites that are
-        clean, functional, and expressive of personality.
+        Hi, I’m Lesedi Pride Iketleng. I’m 19 years old and from South Africa. I’m currently studying Software Development at BYU–Idaho. I enjoy designing websites that are clean, functional, and expressive of personality.
       </p>
     </section>
 
-    <!-- Projects Section (grid mini-cards for future expansion) -->
+    <!-- Projects Section -->
     <section class="projects">
       <h2>What I’ve Been Working On</h2>
-      <div class="projects-grid">
-        <div class="project-card">
+      <div class="projects-grid">        <section class="card">
           <img src="images/rafting-site.png" alt="Screenshot of rafting website">
           <h3>Rafting Website</h3>
           <p>Built in WDD130. Learned HTML, CSS, and responsive design.</p>
-        </div>
-        <div class="project-card">
+        </section>
+        <section class="card">
           <img src="images/poetry-site.png" alt="Screenshot of poetry website">
           <h3>Poetry Publishing Site</h3>
           <p>Currently in progress. Will showcase my poems and future books online.</p>
-        </div>
+        </section>
       </div>
     </section>
   </main>
