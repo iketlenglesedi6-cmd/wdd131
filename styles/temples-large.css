@@ -1,5 +1,8 @@
+/* ----------------------------
+   Large Screen Styles
+---------------------------- */
 @media only screen and (min-width: 32rem) {
-  /* Show nav horizontally and hide hamburger */
+  /* Nav links horizontal and hide hamburger */
   nav ul {
     display: flex;
     flex-direction: row;
@@ -10,9 +13,11 @@
     display: none;
   }
 
-  /* Grid layout for larger screens */
+  /* Main container grid layout */
   .container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     max-width: 1000px;
+    margin: 0 auto 2rem auto;
   }
 }

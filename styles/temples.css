@@ -10,7 +10,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #FDFCFB; /* soft off-white */
-  color: #2F3E46; /* dark slate gray text */
+  color: #2F3E46; /* dark slate gray for body text */
 }
 
 /* ----------------------------
@@ -21,17 +21,22 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background-color: #5A6B8C; /* soft dusty blue */
-  color: #FFFFFF; /* changed to pure white for better contrast */
+  background-color: #5A6B8C; /* dusty blue */
+  color: #FFFFFF;
 }
 
 header h1 {
   font-family: 'Merriweather', serif;
   font-size: 1.6rem;
-  color: #FFFFFF; /* ensure h1 is white too */
+  color: #FFFFFF; /* ensures contrast */
 }
 
 /* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+}
+
 nav ul {
   display: none; /* hidden on mobile */
   list-style: none;
@@ -45,7 +50,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #FFFFFF; /* good contrast */
   padding: 0.5rem 1rem;
   transition: color 0.3s;
 }
@@ -99,17 +104,15 @@ figure img {
   border-radius: 0.5rem;
 }
 
-/* Hover effect on figures */
 figure:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Figcaption with improved contrast */
 figcaption {
   text-align: center;
   margin-top: 0.5rem;
-  color: #5E4B9C; /* darker indigo for better contrast */
+  color: #5E4B9C; /* muted indigo for contrast */
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -120,7 +123,7 @@ figcaption {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #5A6B8C; /* soft dusty blue */
+  background-color: #5A6B8C; /* dusty blue */
   color: #FFFFFF;
   margin-top: 2rem;
 }
