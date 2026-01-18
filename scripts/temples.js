@@ -1,16 +1,22 @@
-// Current year
+// ----------------------------
+// temples.js
+// ----------------------------
+
+// Set current year in footer
 const year = new Date().getFullYear();
 document.getElementById("currentyear").textContent = year;
 
-// Last modified
+// Set last modified date in footer
 document.getElementById("lastModified").textContent =
   "Last modified: " + document.lastModified;
 
-  // Hamburger menu
+// ----------------------------
+// Hamburger Menu Toggle
+// ----------------------------
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
+// Toggle the "open" class on click
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
-  hamburger.textContent = navLinks.classList.contains("open") ? "✖" : "☰";
 });

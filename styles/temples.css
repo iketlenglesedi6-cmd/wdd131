@@ -22,14 +22,14 @@ header {
   align-items: center;
   padding: 1rem 1.5rem;
   background-color: #5A6B8C; /* soft dusty blue */
-  color: #FFFFFF;
+  color: #FFFFFF; /* changed to pure white for better contrast */
 }
 
 header h1 {
   font-family: 'Merriweather', serif;
   font-size: 1.6rem;
+  color: #FFFFFF; /* ensure h1 is white too */
 }
-
 
 /* Navigation */
 nav ul {
@@ -105,10 +105,11 @@ figure:hover {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
+/* Figcaption with improved contrast */
 figcaption {
   text-align: center;
   margin-top: 0.5rem;
-  color: #7C6DAB; /* muted indigo */
+  color: #5E4B9C; /* darker indigo for better contrast */
   font-size: 0.9rem;
   font-weight: 500;
 }
