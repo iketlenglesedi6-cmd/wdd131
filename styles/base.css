@@ -20,11 +20,14 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   text-decoration: none;
   color: #2b2520;
   font-weight: 500;
@@ -109,7 +112,7 @@ main {
   margin-top: 2rem;
 }
 
-.project-card {
+.card {
   background-color: #f5efe6;
   border-radius: 12px;
   padding: 1rem;
@@ -117,13 +120,13 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-card img {
+.card img {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
 
-.project-card:hover {
+.card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
