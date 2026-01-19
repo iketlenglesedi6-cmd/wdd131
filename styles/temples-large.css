@@ -2,7 +2,7 @@
    Large Screen Styles
 ---------------------------- */
 @media only screen and (min-width: 32rem) {
-  /* Nav links horizontal and hide hamburger */
+
   nav ul {
     display: flex;
     flex-direction: row;
