@@ -13,9 +13,6 @@ body {
   color: #2F3E46;
 }
 
-/* ----------------------------
-   Header & Navigation
----------------------------- */
 header {
   display: flex;
   justify-content: space-between;
