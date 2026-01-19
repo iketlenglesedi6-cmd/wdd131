@@ -22,16 +22,15 @@ header {
   align-items: center;
   padding: 1rem 1.5rem;
   background-color: #5A6B8C; /* dusty blue */
-  color: #FFFFFF;
+  color: #FFFFFF; /* fixed contrast */
 }
 
-header h1 {
+header h2 { /* changed from h1 */
   font-family: 'Merriweather', serif;
   font-size: 1.6rem;
   color: #FFFFFF; /* ensures contrast */
 }
 
-/* Navigation */
 nav {
   display: flex;
   align-items: center;
@@ -50,7 +49,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #FFFFFF; /* good contrast */
+  color: #FFFFFF; /* high contrast */
   padding: 0.5rem 1rem;
   transition: color 0.3s;
 }
@@ -59,7 +58,6 @@ nav ul li a:hover {
   color: #D8CDEA; /* pale lavender hover */
 }
 
-/* Hamburger button */
 #hamburger {
   font-size: 1.6rem;
   background: none;
@@ -76,21 +74,20 @@ main h1 {
   margin: 2rem 0 1rem 0;
   font-family: 'Merriweather', serif;
   font-size: 1.8rem;
-  color: #5A6B8C; /* dusty blue for headings */
+  color: #5A6B8C;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr; /* single column for mobile */
+  grid-template-columns: 1fr;
   gap: 1rem;
   max-width: 600px;
   margin: 0 auto 2rem auto;
   padding: 0 1rem;
 }
 
-/* Figure styling */
 figure {
-  background-color: #FAF9F6; /* soft cream */
+  background-color: #FAF9F6;
   padding: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -123,7 +120,7 @@ figcaption {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #5A6B8C; /* dusty blue */
+  background-color: #5A6B8C;
   color: #FFFFFF;
   margin-top: 2rem;
 }
@@ -131,4 +128,26 @@ footer {
 /* Open class for hamburger menu */
 nav ul.open {
   display: block;
+}
+
+/* ----------------------------
+   Large Screen Styles
+---------------------------- */
+@media only screen and (min-width: 32rem) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+  }
 }
