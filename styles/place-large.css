@@ -1,0 +1,38 @@
+@media screen and (min-width: 600px) {
+
+  body {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Center sections and set max-width */
+  #about, #weather, #facts {
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+  }
+
+  /* HERO IMAGE */
+  #hero img {
+    border-radius: 12px;
+  }
+
+  /* WEATHER SECTION: emoji for desktop */
+  #weather h2::after {
+    content: " ⛅";
+    margin-left: 0.5rem;
+  }
+
+  #weather img {
+    display: none;
+  }
+
+  /* FACTS: two columns */
+  #facts ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
