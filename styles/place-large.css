@@ -1,38 +1,101 @@
 @media screen and (min-width: 600px) {
 
-  body {
-    padding: 2rem;
+  /* HERO SETUP */
+  #hero {
+    position: relative;
   }
 
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  /* Center sections and set max-width */
-  #about, #weather, #facts {
-    max-width: 900px;
-    margin: 0 auto 2rem auto;
-  }
-
-  /* HERO IMAGE */
   #hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  /* DARKEN HERO SLIGHTLY FOR CONTRAST */
+  #hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.35)
+    );
+    z-index: 0;
     border-radius: 12px;
   }
 
-  /* WEATHER SECTION: emoji for desktop */
+  /* HERO CONTENT GRID */
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 3rem;
+    gap: 2.5rem;
+
+    align-items: stretch; /* key for vertical spacing */
+  }
+
+  /* LEFT COLUMN: ABOUT */
+  #about {
+    max-width: 520px;       /* contains width */
+    justify-self: center;   /* centers in column */
+    align-self: center;     /* vertical centering */
+    background-color: rgba(255, 255, 255, 0.78);
+    border-radius: 18px;
+    padding: 1.25rem 1.5rem;
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.18),
+      0 4px 8px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(4px);
+  }
+
+  #about p {
+    max-width: 60ch;       /* readable line length */
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  /* RIGHT COLUMN: Weather + Facts */
+  .right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* evenly distributes top/bottom */
+    height: 100%;                     /* fill column vertically */
+    gap: 1.25rem;
+  }
+
+  .right-panel section {
+    background-color: rgba(255, 255, 255, 0.7); /* lighter than About */
+    border-radius: 18px;
+    padding: 1rem 1.25rem;
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.12),
+      0 4px 8px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(4px);
+    font-size: 0.9rem;
+  }
+
+  /* WEATHER ICON RULES */
+  #weather img {
+    display: none;       /* hide static image on desktop */
+  }
+
   #weather h2::after {
-    content: " ⛅";
+    content: " ⛅";       /* emoji after heading */
     margin-left: 0.5rem;
   }
 
-  #weather img {
-    display: none;
-  }
-
-  /* FACTS: two columns */
+  /* FACTS LIST COLUMN */
   #facts ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    padding-left: 0;
   }
 }

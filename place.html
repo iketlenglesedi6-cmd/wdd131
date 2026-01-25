@@ -6,74 +6,70 @@
   <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Soweto Page | Lesedi Pride Iketleng">
   <meta name="author" content="Lesedi Pride Iketleng">
 
-  <title>Soweto – WDD 131 – Lesedi Pride Iketleng</title>
+  <title>Soweto – WDD 131</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/place.css">
   <link rel="stylesheet" href="styles/place-large.css">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- JavaScript -->
   <script defer src="scripts/place.js"></script>
 </head>
+
 <body>
-  <!-- HEADER -->
-  <header>
-    <h1 id="page-title">Soweto</h1>
-  </header>
 
-  <!-- HERO SECTION -->
-  <section id="hero">
-    <picture>
-      <source srcset="images/soweto-hero-large.webp" media="(min-width: 600px)">
-        <img src="images/soweto-hero-small.webp" alt="Soweto street view">
-    </picture>
-  </section>
+<header>
+  <h1>Soweto</h1>
+</header>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <!-- ABOUT SECTION -->
+<section id="hero">
+
+  <picture class="hero-image">
+    <source srcset="images/soweto-hero-large.webp" media="(min-width: 600px)">
+    <img src="images/soweto-hero-small.webp" alt="Soweto street view">
+  </picture>
+
+  <div class="hero-content">
+
     <section id="about">
       <h2>About</h2>
       <p>
-        Soweto, short for South Western Townships, is a historic and vibrant community located just south of Johannesburg. 
-        It has played a pivotal role in South Africa’s struggle for freedom, with streets and neighborhoods that tell stories of resilience and courage. 
-        The township is home to Vilakazi Street, the only street in the world where two Nobel Peace Prize winners, Nelson Mandela and Desmond Tutu, once lived. 
-        Beyond its history, Soweto is alive with culture, music, and art — from lively jazz performances to colorful murals that celebrate local heritage. 
-        Visitors can explore bustling markets, taste traditional foods, and experience the warmth and energy of the community. 
-        Despite its challenges over the years, Soweto has grown into a symbol of strength, pride, and unity for South Africans. 
-        Every corner offers a glimpse into the past while embracing modern life, making it both educational and inspiring for anyone who visits.
+        Soweto, short for South Western Townships, is a historic and culturally rich area located south of Johannesburg.
+        It played a central role in South Africa’s fight against apartheid and remains a powerful symbol of resilience.
+        Home to Vilakazi Street, where Nelson Mandela and Desmond Tutu once lived, Soweto blends deep history with vibrant
+        music, art, and daily life. Today, it stands as a place of pride, storytelling, and community spirit.
       </p>
     </section>
 
-    <!-- WEATHER SECTION -->
-    <section id="weather">
-      <h2>Weather</h2>
-      <img src="images/weather.svg" alt="Weather icon" id="weather-icon">
-      <p>Temperature: <span id="temp">9</span> °C</p>
-      <p>Wind Speed: <span id="speed">12</span> km/h</p>
-      <p>Wind Chill: <span id="windchill">N/A</span></p>
-    </section>
+    <div class="right-panel">
 
-    <!-- FACTS SECTION -->
-    <section id="facts">
-      <h2>Facts</h2>
-      <ul>
-        <li>Location: Johannesburg, Gauteng</li>
-        <li>Population: ~1.3 million</li>
-        <li>Famous street: Vilakazi Street</li>
-        <li>Known for: History, music, culture</li>
-      </ul>
-    </section>
-  </main>
+      <section id="weather">
+        <h2>Weather</h2>
+        <img src="images/weather.svg" alt="Weather icon">
+        <p>Temperature: <span id="temp">9</span> °C</p>
+        <p>Wind Speed: <span id="speed">12</span> km/h</p>
+        <p>Wind Chill: <span id="windchill">N/A</span></p>
+      </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© <span id="year"></span> | Last Modified: <span id="modified"></span></p>
-  </footer>
+      <section id="facts">
+        <h2>Facts</h2>
+        <ul>
+          <li>Location: Johannesburg, Gauteng</li>
+          <li>Population: ~1.3 million</li>
+          <li>Famous street: Vilakazi Street</li>
+          <li>Known for: History and culture</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> | Last Modified: <span id="modified"></span></p>
+</footer>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* VARIABLES */
+/* VARIABLES & GLOBAL STYLES */
 :root {
   --primary-color: #007749;
   --secondary-color: #2A2A2A;
@@ -11,7 +11,6 @@
   --font-body: 'Roboto', sans-serif;
 }
 
-/* GLOBAL STYLES */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,13 +22,14 @@ body {
   color: var(--secondary-color);
   background-color: var(--background-color);
   line-height: 1.6;
+  font-size: 16px;
   padding: var(--spacing);
 }
 
+/* HEADINGS */
 h1, h2 {
   font-family: var(--font-heading);
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -39,8 +39,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
 }
 
 /* HERO IMAGE */
@@ -48,37 +49,41 @@ h2 {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
-  margin-bottom: var(--spacing);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* SECTIONS (ABOUT, WEATHER, FACTS) */
+section {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1.25rem;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.12),
+    0 3px 6px rgba(0,0,0,0.08);
+  backdrop-filter: blur(3px);
 }
 
 /* ABOUT SECTION */
-#about {
-  background-color: #fff4e1;
-  padding: var(--spacing);
-  border-left: 5px solid var(--accent-color);
-  border-radius: 6px;
-  margin-bottom: var(--spacing);
-}
-
 #about p {
-  font-size: 1rem;
+  max-width: 60ch;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0;
 }
 
 /* WEATHER SECTION */
-#weather {
-  background-color: #e8f7f1;
-  padding: var(--spacing);
-  border-radius: 6px;
-  margin-bottom: var(--spacing);
+#weather img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
 }
 
-#weather img {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin-bottom: 0.5rem;
+#weather h2::after {
+  content: " ⛅";
+  margin-left: 0.5rem;
 }
 
 #weather p {
@@ -87,13 +92,6 @@ h2 {
 }
 
 /* FACTS SECTION */
-#facts {
-  background-color: #fff4e1;
-  padding: var(--spacing);
-  border-radius: 6px;
-  margin-bottom: var(--spacing);
-}
-
 #facts ul {
   list-style-type: disc;
   padding-left: 1.5rem;
