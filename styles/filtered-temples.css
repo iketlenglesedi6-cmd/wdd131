@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FDFCFB;
+  color: #2F3E46;
+}
+
+/* ---------------- Header ---------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #5A6B8C;
+}
+
+header,
+header * {
+  color: #FFFFFF;
+}
+
+header h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.6rem;
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+#hamburger {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------------- Main ---------------- */
+main h1 {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-family: 'Merriweather', serif;
+  color: #5A6B8C;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+/* ---------------- Cards ---------------- */
+figure {
+  background-color: #FAF9F6;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(90, 107, 140, 0.25);
+}
+
+figcaption {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+figcaption h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+figcaption p {
+  font-size: 0.85rem;
+  color: #5A6B8C;
+  margin: 0.15rem 0;
+}
+
+figcaption .location {
+  font-style: italic;
+  color: #6D597A;
+}
+
+figure img {
+  width: 100%;
+  display: block;
+  border-top: 1px solid #E0E0E0;
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #5A6B8C;
+  color: #FFFFFF;
+  margin-top: 2rem;
+}
+
+/* ---------------- Menu ---------------- */
+nav ul.open {
+  display: block;
+}
