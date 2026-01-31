@@ -1,11 +1,11 @@
-// ---------------- Footer ----------------
+// ---------- Footer ----------
 document.getElementById("currentyear").textContent =
   new Date().getFullYear();
 
 document.getElementById("lastModified").textContent =
   "Last modified: " + document.lastModified;
 
-// ---------------- Hamburger ----------------
+// ---------- Hamburger ----------
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
@@ -13,7 +13,7 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 });
 
-// ---------------- Data ----------------
+// ---------- Data ----------
 const temples = [
   {
     templeName: "Salt Lake Temple",
@@ -113,7 +113,7 @@ const temples = [
   }
 ];
 
-// ---------------- Display ----------------
+// ---------- Display ----------
 const container = document.querySelector(".container");
 
 function displayTemples(list) {
@@ -141,7 +141,7 @@ function displayTemples(list) {
   });
 }
 
-// ---------------- Filter ----------------
+// ---------- Filter ----------
 function filterTemples(type) {
   let result = temples;
 
@@ -158,7 +158,7 @@ function filterTemples(type) {
   displayTemples(result);
 }
 
-// ---------------- Nav ----------------
+// ---------- Nav ----------
 document.querySelectorAll("nav a").forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
@@ -166,5 +166,5 @@ document.querySelectorAll("nav a").forEach(link => {
   });
 });
 
-// ---------------- Init ----------------
+// ---------- Init ----------
 displayTemples(temples);
