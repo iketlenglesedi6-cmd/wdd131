@@ -1,3 +1,6 @@
+/* ----------------------------
+   Reset and Base
+---------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +13,7 @@ body {
   color: #2F3E46;
 }
 
-/* ---------- Header ---------- */
+/* ---------------- Header ---------------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -29,12 +32,11 @@ header h2 {
   font-size: 1.6rem;
 }
 
-/* ---------- Navigation ---------- */
+/* ---------------- Navigation ---------------- */
 nav ul {
-  display: flex;
+  display: none;               /* hidden on mobile */
   flex-direction: column;
   list-style: none;
-  display: none;
 }
 
 nav ul li a {
@@ -44,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: rgba(255,255,255,0.2);
+  color: #D8CDEA;
 }
 
 #hamburger {
@@ -54,7 +56,12 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* ---------- Main ---------- */
+/* JS toggled class */
+nav ul.open {
+  display: flex;
+}
+
+/* ---------------- Main ---------------- */
 main h1 {
   text-align: center;
   margin: 2rem 0 1rem;
@@ -62,7 +69,7 @@ main h1 {
   color: #5A6B8C;
 }
 
-/* ---------- Grid ---------- */
+/* Card grid (mobile first) */
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -72,7 +79,7 @@ main h1 {
   padding: 0 1rem;
 }
 
-/* ---------- Cards ---------- */
+/* ---------------- Cards ---------------- */
 figure {
   background-color: #FAF9F6;
   border-radius: 0.75rem;
@@ -86,6 +93,7 @@ figure:hover {
   box-shadow: 0 10px 22px rgba(90, 107, 140, 0.25);
 }
 
+/* Text on top */
 figcaption {
   padding: 0.75rem;
   text-align: center;
@@ -108,22 +116,18 @@ figcaption .location {
   color: #6D597A;
 }
 
+/* Image at bottom */
 figure img {
   width: 100%;
   display: block;
   border-top: 1px solid #E0E0E0;
 }
 
-/* ---------- Footer ---------- */
+/* ---------------- Footer ---------------- */
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #5A6B8C;
   color: #FFFFFF;
   margin-top: 2rem;
-}
-
-/* ---------- Menu Toggle ---------- */
-nav ul.open {
-  display: block;
 }
