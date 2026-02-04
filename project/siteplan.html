@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Space Poetry | Site Plan</title>
+  <meta name="description" content="Safe Space Poetry – a welcoming, healing space for sharing and reading poems. This site plan outlines the structure, colors, typography, wireframes, and scenarios for the website project.">
+  <meta name="author" content="Lesedi Pride Iketleng">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #787775;
+      --muted: #97978f;
+      --accent: #c4b3a9;
+      --light: #e1e2e6;
+      --white: #ebebeb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      background-color: var(--white);
+      color: var(--dark);
+      line-height: 1.6;
+      padding-bottom: 2rem;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+
+    header h1 {
+      font-family: Playfair Display, serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+    }
+
+    header button {
+      background-color: var(--accent);
+      color: var(--dark);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: var(--light);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: Playfair Display, serif;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    footer {
+      background-color: var(--light);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .info-box {
+      background-color: var(--e1e2e6);
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1 id="featured-poem-title">Welcome</h1>
+      <p id="featured-poem-text">This is a safe space to breathe, feel, and share words that heal.</p>
+      <button onclick="enterSite()">Enter the Safe Space</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#poems">My Poems</a>
+    <a href="#submissions">Submissions</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="site-name">
+    <h2>Site Name</h2>
+    <div class="info-box">
+      <p><strong>Safe Space Poetry</strong></p>
+      <p>This name reflects the purpose of the site as a welcoming, healing space where people can share poetry, emotions, and personal stories without judgment.</p>
+      <img src="images/logo.png" alt="Soft Cloud Logo for Safe Space Poetry" style="max-width:150px;">
+      <figcaption>Safe space poetry logo</figcaption>
+    </div>
+  </section>
+
+  <section id="site-purpose">
+    <h2>Site Purpose</h2>
+    <div class="info-box">
+      <p>The website provides a safe, inclusive space for poetry lovers to read, share, and submit poems. It features original poems, community submissions, and allows visitors to request poems or offer feedback. The purpose is to encourage emotional expression, healing, and connection through words.</p>
+    </div>
+  </section>
+
+  <section id="scenarios">
+    <h2>Scenarios</h2>
+    <div class="info-box">
+      <ul>
+        <li>How can I submit my own poem to be shared on the website?</li>
+        <li>Where can I read poems that relate to healing, love, or self growth?</li>
+        <li>Can I request a personalized poem or leave feedback for the creator?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="color-scheme">
+    <h2>Color Scheme</h2>
+    <div class="info-box">
+      <ul>
+        <li>#787775: Primary text and headings</li>
+        <li>#97978f: Secondary text and navigation elements</li>
+        <li>#c4b3a9: Accent color for buttons and highlights</li>
+        <li>#e1e2e6: Section backgrounds</li>
+        <li>#ebebeb: Main page background</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="typography">
+    <h2>Typography</h2>
+    <div class="info-box">
+      <ul>
+        <li>Playfair Display: Headings and poem titles</li>
+        <li>Inter: Body text and navigation</li>
+        <li>Cormorant Garamond (optional): Special quotes or featured poems</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pages">
+    <h2>Pages / Structure</h2>
+    <div class="info-box">
+      <ul>
+        <li>Home: Featured poem that changes daily, welcoming visual, minimal text</li>
+        <li>About: Personal journey, writing style, and purpose of the space</li>
+        <li>Poems: Original poems and books organized by theme</li>
+        <li>Community Submissions: Visitor submitted poems and sharing space</li>
+        <li>Contact: Feedback, donation links, and poem requests</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="wireframes">
+    <h2>Wireframes</h2>
+    <div class="info-box">
+      <p>Wireframes for home page (mobile & desktop) can be simple box diagrams showing:</p>
+      <ul>
+        <li>Header with featured poem</li>
+        <li>Navigation</li>
+        <li>Sections for About, Poems, Submissions, Contact</li>
+        <li>Footer with references</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Safe Space Poetry | References page linked in final footer</p>
+  </footer>
+
+  <script>
+    const poems = [
+      { title: 'Breathing Room', text: 'You are allowed to rest here.' },
+      { title: 'Quiet', text: 'Not everything needs to be said to be real.' },
+      { title: 'Still Here', text: 'Survival is a form of courage.' },
+      { title: 'Soft Rain', text: 'Even storms bring calm in their own way.' },
+      { title: 'Light', text: 'Small sparks can brighten the darkest night.' },
+      { title: 'Gentle Waves', text: 'Emotions ebb and flow; let them move.' },
+      { title: 'Open Sky', text: 'Breathe deeply and release the weight you carry.' },
+      { title: 'New Dawn', text: 'Every day is a fresh chance to heal.' },
+      { title: 'Stillness', text: 'In quiet moments, we find clarity.' },
+      { title: 'Heartstrings', text: 'Words connect us in ways silence cannot.' },
+      { title: 'Fading Echo', text: 'Sadness lingers, but light is always near.' },
+      { title: 'Hidden Hope', text: 'Even behind the tears, tomorrow waits.' },
+      { title: 'Shadows', text: 'Darkness passes; the sun always returns.' },
+      { title: 'Quiet Strength', text: 'Soft courage grows in still hearts.' },
+      { title: 'Flicker', text: 'A tiny light can guide the lost.' },
+      { title: 'Fallen Petals', text: 'Even beauty has its moment of rest.' },
+      { title: 'Glimmer', text: 'Hope appears in unexpected ways.' },
+      { title: 'Whispered Truth', text: 'The heart speaks even when silence is loud.' },
+      { title: 'Morning Mist', text: 'A new day washes over the past.' },
+      { title: 'Lonely Road', text: 'You walk alone, yet the path has purpose.' },
+      { title: 'Rising Tide', text: 'Every wave brings change and renewal.' },
+      { title: 'Soft Echo', text: 'Your voice matters, even if faint.' },
+      { title: 'Empty Chair', text: 'Loss teaches us to cherish the present.' },
+      { title: 'Quiet Horizon', text: 'The future waits beyond the shadows.' },
+      { title: 'Faint Light', text: 'Even the smallest glow defeats darkness.' },
+      { title: 'Fallen Star', text: 'Moments of despair can reveal hidden beauty.' },
+      { title: 'Gentle Breeze', text: 'Peace arrives quietly, without notice.' },
+      { title: 'Broken Vase', text: 'Fractures still hold reflections of beauty.' },
+      { title: 'Silver Lining', text: 'Every cloud carries a hint of hope.' },
+      { title: 'Fading Footsteps', text: 'Let go and move forward softly.' },
+      { title: 'Distant Song', text: 'Even far away, comfort can be heard.' },
+      { title: 'Hushed Laughter', text: 'Joy returns in subtle, quiet ways.' },
+      { title: 'Still Waters', text: 'Calm beneath the surface holds strength.' },
+      { title: 'Fallen Leaves', text: 'Change is natural, and it can be beautiful.' },
+      { title: 'Twilight', text: 'The end of day invites reflection and rest.' },
+      { title: 'Morning Glow', text: 'Light returns after every long night.' },
+      { title: 'Hidden Garden', text: 'Peace exists in secret corners of the heart.' },
+      { title: 'Quiet Flame', text: 'Small fires endure when storms pass.' },
+      { title: 'Shattered Glass', text: 'Fragments can create new reflections.' },
+      { title: 'Open Door', text: 'Opportunities appear when you least expect them.' },
+      { title: 'Gentle Rain', text: 'Tears water the soul’s growth.' },
+      { title: 'Soft Footsteps', text: 'Even small progress moves you forward.' },
+      { title: 'Lonely Star', text: 'You shine, even when alone.' },
+      { title: 'Silent Song', text: 'Music lives in hearts, not just ears.' },
+      { title: 'Fading Horizon', text: 'Distance teaches perspective and hope.' },
+      { title: 'Whispering Pines', text: 'Nature comforts when words fail.' },
+      { title: 'Golden Threads', text: 'Every experience weaves into something meaningful.' },
+      { title: 'Hidden Path', text: 'Sometimes the unknown leads to beauty.' },
+      { title: 'Calm Storm', text: 'Even chaos has a rhythm to it.' },
+      { title: 'Frosted Window', text: 'Cold can reveal clarity and reflection.' },
+      { title: 'Rising Sun', text: 'Light always returns, bright and patient.' },
+      { title: 'Open Heart', text: 'Vulnerability carries quiet strength.' }
+    ];
+
+    function enterSite() {
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    }
+
+    function getDayOfYear() {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), 0, 0);
+      const diff = now - start;
+      const oneDay = 1000 * 60 * 60 * 24;
+      return Math.floor(diff / oneDay);
+    }
+
+    function loadFeaturedPoem() {
+      const dayNum = getDayOfYear();
+      const index = dayNum % poems.length; // rotate daily
+      document.getElementById('featured-poem-title').textContent = poems[index].title;
+      document.getElementById('featured-poem-text').textContent = poems[index].text;
+    }
+
+    loadFeaturedPoem();
+  </script>
+
+</body>
+</html>
