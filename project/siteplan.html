@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Safe Space Poetry | Site Plan</title>
+
   <meta name="description" content="Safe Space Poetry – a welcoming site to read and share poems. Includes site plan with colors, fonts, and wireframes.">
   <meta name="author" content="Lesedi Pride Iketleng">
 
@@ -15,107 +17,109 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="styles/siteplan.css">
 </head>
+
 <body>
 
   <header>
     <div>
       <h1 id="featured-poem-title">Welcome</h1>
-      <p id="featured-poem-text">This is a safe space to breathe, feel, and share words that heal.</p>
-      <button onclick="enterSite()">Enter the Safe Space</button>
+      <p id="featured-poem-text">
+        This is a safe space to breathe, feel, and share words that heal.
+      </p>
+      <button type="button" id="enter-btn">Enter the Safe Space</button>
     </div>
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#poems">My Poems</a>
-    <a href="#submissions">Submissions</a>
-    <a href="#contact">Contact</a>
+    <a href="#site-name">Site Name</a>
+    <a href="#site-purpose">Purpose</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#color-scheme">Colors</a>
+    <a href="#typography">Typography</a>
+    <a href="#wireframes">Wireframes</a>
   </nav>
 
-  <section id="site-name">
-    <h2>Site Name</h2>
-    <div class="info-box">
-      <p><strong>Safe Space Poetry</strong></p>
-      <p>This name reflects the purpose of the site as a welcoming, healing space where people can share poetry, emotions, and personal stories without judgment.</p>
-      <img src="images/logo.png" alt="Soft Cloud Logo for Safe Space Poetry" style="max-width:150px;">
-      <figcaption>Safe space poetry logo</figcaption>
-    </div>
-  </section>
+  <main>
 
-  <section id="site-purpose">
-    <h2>Site Purpose</h2>
-    <div class="info-box">
-      <p>The website provides a safe, inclusive space for poetry lovers to read, share, and submit poems. It features original poems, community submissions, and allows visitors to request poems or offer feedback. The purpose is to encourage emotional expression, healing, and connection through words.</p>
-    </div>
-  </section>
+    <section id="site-name">
+      <h2>Site Name</h2>
+      <div class="info-box">
+        <p><strong>Safe Space Poetry</strong></p>
+        <p>
+          This name reflects the purpose of the site as a welcoming, healing space
+          where people can share poetry, emotions, and personal stories without judgment.
+        </p>
 
-  <section id="scenarios">
-    <h2>Scenarios</h2>
-    <div class="info-box">
-      <ul>
-        <li>How can I submit my own poem to be shared on the website?</li>
-        <li>Where can I read poems that relate to healing, love, or self growth?</li>
-        <li>Can I request a personalized poem or leave feedback for the creator?</li>
-      </ul>
-    </div>
-  </section>
+        <!-- FIXED: figure + figcaption structure -->
+        <figure>
+          <img src="images/logo.png" alt="Soft Cloud Logo for Safe Space Poetry">
+          <figcaption>Safe Space Poetry logo</figcaption>
+        </figure>
+      </div>
+    </section>
 
-  <section id="color-scheme">
-    <h2>Color Scheme</h2>
-    <div class="info-box">
-      <ul>
-        <li>#787775: Primary text and headings</li>
-        <li>#97978f: Secondary text and navigation elements</li>
-        <li>#c4b3a9: Accent color for buttons and highlights</li>
-        <li>#e1e2e6: Section backgrounds</li>
-        <li>#ebebeb: Main page background</li>
-      </ul>
-    </div>
-  </section>
+    <section id="site-purpose">
+      <h2>Site Purpose</h2>
+      <div class="info-box">
+        <p>
+          The website provides a safe, inclusive space for poetry lovers to read,
+          share, and submit poems. It features original poems, community submissions,
+          and allows visitors to request poems or offer feedback. The purpose is to
+          encourage emotional expression, healing, and connection through words.
+        </p>
+      </div>
+    </section>
 
-  <section id="typography">
-    <h2>Typography</h2>
-    <div class="info-box">
-      <ul>
-        <li>Playfair Display: Headings and poem titles</li>
-        <li>Inter: Body text and navigation</li>
-        <li>Cormorant Garamond (optional): Special quotes or featured poems</li>
-      </ul>
-    </div>
-  </section>
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <div class="info-box">
+        <ul>
+          <li>How can I submit my own poem to be shared on the website?</li>
+          <li>Where can I read poems that relate to healing, love, or self growth?</li>
+          <li>Can I request a personalized poem or leave feedback?</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="pages">
-    <h2>Pages / Structure</h2>
-    <div class="info-box">
-      <ul>
-        <li>Home: Featured poem that changes daily, welcoming visual, minimal text</li>
-        <li>About: Personal journey, writing style, and purpose of the space</li>
-        <li>Poems: Original poems and books organized by theme</li>
-        <li>Community Submissions: Visitor submitted poems and sharing space</li>
-        <li>Contact: Feedback, donation links, and poem requests</li>
-      </ul>
-    </div>
-  </section>
+    <section id="color-scheme">
+      <h2>Color Scheme</h2>
+      <div class="info-box">
+        <ul>
+          <li>#787775 – Primary text and headings</li>
+          <li>#97978f – Secondary text and navigation</li>
+          <li>#c4b3a9 – Accent color for buttons and highlights</li>
+          <li>#e1e2e6 – Section backgrounds</li>
+          <li>#ebebeb – Page background</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="wireframes">
-    <h2>Wireframes</h2>
-    <div class="info-box">
-      <p>Wireframes for home page (mobile & desktop) can be simple box diagrams showing:</p>
-      <ul>
-        <li>Header with featured poem</li>
-        <li>Navigation</li>
-        <li>Sections for About, Poems, Submissions, Contact</li>
-        <li>Footer with references</li>
-      </ul>
-    </div>
-  </section>
+    <section id="typography">
+      <h2>Typography</h2>
+      <div class="info-box">
+        <ul>
+          <li>Playfair Display – Headings and poem titles</li>
+          <li>Inter – Body text and navigation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+      <div class="info-box">
+        <p>
+          Wireframes include a simple header area, navigation below,
+          vertically stacked content sections, and a footer with references.
+        </p>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2026 Safe Space Poetry | References page linked in final footer</p>
+    <p>© 2026 Safe Space Poetry</p>
   </footer>
 
-  <!-- External JS -->
   <script src="scripts/siteplan.js"></script>
-
 </body>
 </html>
