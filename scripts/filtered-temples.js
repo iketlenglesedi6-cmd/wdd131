@@ -64,13 +64,13 @@ const temples = [
     alt: "Sydney Australia Temple"
   },
   {
-    templeName: "Accra Ghana Temple",
-    location: "Accra, Ghana",
-    dedicated: "2004-01-11",
-    area: 11000,
-    imageUrl: "images/ghana-temple.jpg",
-    alt: "Accra Ghana Temple"
-  },
+  templeName: "Cochabamba Bolivia Temple",
+  location: "Cochabamba, Bolivia",
+  dedicated: "2000-07-09",
+  area: 9800,
+  imageUrl: "images/cochabamba-bolivia-temple.jpg",
+  alt: "Cochabamba Bolivia Temple"
+},
   {
     templeName: "São Paulo Brazil Temple",
     location: "São Paulo, Brazil",
