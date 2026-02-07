@@ -13,6 +13,7 @@ const features = [
   "Comfortable fit"
 ];
 
+// Populate Product Dropdown
 const productSelect = document.getElementById("product");
 products.forEach(product => {
   const option = document.createElement("option");
@@ -21,6 +22,7 @@ products.forEach(product => {
   productSelect.appendChild(option);
 });
 
+// Populate Features Checkboxes
 const featuresFieldset = document.querySelector("fieldset#features");
 features.forEach(feature => {
   const label = document.createElement("label");
@@ -30,5 +32,6 @@ features.forEach(feature => {
   featuresFieldset.appendChild(label);
 });
 
+// Last Modified Date
 document.getElementById("lastModified").textContent =
   "Last modified: " + document.lastModified;
