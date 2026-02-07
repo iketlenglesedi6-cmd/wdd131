@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Lesedi Pride Iketleng">
-  <meta name="description" content="WDD 131 product review form by Lesedi Pride Iketleng. Submit reviews with dynamic product selection, star ratings, and feature checkboxes.">
+  <meta name="description" content="Submit a product review for BassBoost 3000, QuietComfort X, or SoundWave Pro. Include star rating, installation date, features, and optional comments.">
   <meta name="keywords" content="WDD131, BYU-I, Product Review, HTML, CSS, JavaScript, Form, Dynamic Form">
   <title>WDD 131 - Product Review Form</title>
   <link rel="stylesheet" href="styles/styles.css">
@@ -21,6 +21,9 @@
       <label for="product">Product Name:</label>
       <select id="product" name="product" required>
         <option value="" disabled selected>Select a Product ...</option>
+        <option value="bassboost3000">BassBoost 3000</option>
+        <option value="quietcomfortx">QuietComfort X</option>
+        <option value="soundwavepro">SoundWave Pro</option>
       </select>
 
       <!-- Overall Rating -->
@@ -28,13 +31,13 @@
         <legend>Overall Rating:</legend>
         <input type="radio" name="rating" id="star5" value="5" required>
         <label for="star5">☆</label>
-        <input type="radio" name="rating" id="star4" value="4" required>
+        <input type="radio" name="rating" id="star4" value="4">
         <label for="star4">☆</label>
-        <input type="radio" name="rating" id="star3" value="3" required>
+        <input type="radio" name="rating" id="star3" value="3">
         <label for="star3">☆</label>
-        <input type="radio" name="rating" id="star2" value="2" required>
+        <input type="radio" name="rating" id="star2" value="2">
         <label for="star2">☆</label>
-        <input type="radio" name="rating" id="star1" value="1" required>
+        <input type="radio" name="rating" id="star1" value="1">
         <label for="star1">☆</label>
       </fieldset>
 
@@ -45,11 +48,10 @@
       <!-- Useful Features -->
       <fieldset id="features">
         <legend>Useful Features:</legend>
-        <!-- Placeholder checkboxes for audit -->
-        <input type="checkbox" name="features" value="placeholder1" style="display:none;">
-        <input type="checkbox" name="features" value="placeholder2" style="display:none;">
-        <input type="checkbox" name="features" value="placeholder3" style="display:none;">
-        <input type="checkbox" name="features" value="placeholder4" style="display:none;">
+        <label><input type="checkbox" name="features" value="Noise-cancelling"> Noise-cancelling</label>
+        <label><input type="checkbox" name="features" value="Long battery life"> Long battery life</label>
+        <label><input type="checkbox" name="features" value="Wireless"> Wireless</label>
+        <label><input type="checkbox" name="features" value="Comfortable fit"> Comfortable fit</label>
       </fieldset>
 
       <!-- Written Review -->
