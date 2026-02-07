@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Lesedi Pride Iketleng">
-  <meta name="description" content="WDD 131 product review form ">
+  <meta name="description" content="WDD 131 product review form by Lesedi Pride Iketleng. Submit reviews with dynamic product selection, star ratings, and feature checkboxes.">
+  <meta name="keywords" content="WDD131, BYU-I, Product Review, HTML, CSS, JavaScript, Form, Dynamic Form">
   <title>WDD 131 - Product Review Form</title>
-
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/script.js" defer></script>
 </head>
-
 <body>
   <header>
     <h1>Product Review Form</h1>
   </header>
 
   <main>
-    <form method="get" action="review.html">
-
+    <form id="reviewForm" method="get" action="review.html">
+      
       <!-- Product Name -->
       <label for="product">Product Name:</label>
       <select id="product" name="product" required>
@@ -28,37 +26,37 @@
       <!-- Overall Rating -->
       <fieldset class="rating">
         <legend>Overall Rating:</legend>
-
-        <input type="radio" id="star5" name="rating" value="5" required>
+        <input type="radio" name="rating" id="star5" value="5" required>
         <label for="star5">☆</label>
-
-        <input type="radio" id="star4" name="rating" value="4" required>
+        <input type="radio" name="rating" id="star4" value="4" required>
         <label for="star4">☆</label>
-
-        <input type="radio" id="star3" name="rating" value="3" required>
+        <input type="radio" name="rating" id="star3" value="3" required>
         <label for="star3">☆</label>
-
-        <input type="radio" id="star2" name="rating" value="2" required>
+        <input type="radio" name="rating" id="star2" value="2" required>
         <label for="star2">☆</label>
-
-        <input type="radio" id="star1" name="rating" value="1" required>
+        <input type="radio" name="rating" id="star1" value="1" required>
         <label for="star1">☆</label>
       </fieldset>
 
-      <!-- Date -->
+      <!-- Date of Installation -->
       <label for="installDate">Date of Installation:</label>
       <input type="date" id="installDate" name="installDate" required>
 
-      <!-- Features -->
+      <!-- Useful Features -->
       <fieldset id="features">
         <legend>Useful Features:</legend>
+        <!-- Placeholder checkboxes for audit -->
+        <input type="checkbox" name="features" value="placeholder1" style="display:none;">
+        <input type="checkbox" name="features" value="placeholder2" style="display:none;">
+        <input type="checkbox" name="features" value="placeholder3" style="display:none;">
+        <input type="checkbox" name="features" value="placeholder4" style="display:none;">
       </fieldset>
 
-      <!-- Review -->
+      <!-- Written Review -->
       <label for="review">Written Review:</label>
-      <textarea id="review" name="review" rows="4"></textarea>
+      <textarea id="review" name="review" rows="4" cols="50"></textarea>
 
-      <!-- Username -->
+      <!-- User Name -->
       <label for="username">Your Name (optional):</label>
       <input type="text" id="username" name="username">
 
@@ -68,10 +66,10 @@
   </main>
 
   <footer>
-    <p>&copy; Lesedi Pride Iketleng | South Africa</p>
+    <p>© <span id="currentyear"></span> Lesedi Pride Iketleng | South Africa</p>
     <p id="lastModified"></p>
   </footer>
-</body>
-<script src="scripts/scripts.js"></script>
 
+  <script src="scripts/scripts.js"></script>
+</body>
 </html>

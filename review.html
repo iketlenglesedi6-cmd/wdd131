@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Lesedi Pride Iketleng">
-  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals: Review confirmation page for product reviews submitted by Lesedi Pride Iketleng. Displays total number of reviews submitted using localStorage.">
+  <meta name="description" content="WDD 131 review confirmation page by Lesedi Pride Iketleng. Displays total number of reviews submitted using localStorage.">
   <meta name="keywords" content="WDD131, BYU-I, Product Review, Review Confirmation, HTML, CSS, JavaScript, LocalStorage">
   <title>WDD 131 - Review Submitted</title>
   <link rel="stylesheet" href="styles/styles.css">
@@ -15,13 +15,20 @@
     <p id="counter"></p>
   </main>
 
- <footer>
+  <footer>
     <p>© <span id="currentyear"></span> Lesedi Pride Iketleng | South Africa</p>
     <p id="lastModified"></p>
   </footer>
 
   <script>
-   
+    // Update current year
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+
+    // Update last modified date
+    document.getElementById('lastModified').textContent =
+      "Last modified: " + document.lastModified;
+
+    // LocalStorage review counter
     let count = localStorage.getItem('reviewCount') || 0;
     count++;
     localStorage.setItem('reviewCount', count);
@@ -29,5 +36,4 @@
     document.getElementById('counter').textContent = `Total reviews submitted: ${count}`;
   </script>
 </body>
-<script src="scripts/scripts.js"></script>
 </html>
