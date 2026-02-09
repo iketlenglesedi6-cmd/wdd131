@@ -22,6 +22,7 @@ products.forEach(product => {
   productSelect.appendChild(option);
 });
 
+
 // Populate Features Checkboxes with proper labels and IDs
 const featuresFieldset = document.getElementById("features");
 features.forEach((feature, index) => {
