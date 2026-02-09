@@ -86,9 +86,6 @@ figure {
   text-align: center;
 }
 
-figure img {
-  max-width: 150px;
-}
 
 footer {
   background-color: var(--light);
