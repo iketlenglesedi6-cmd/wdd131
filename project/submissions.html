@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Space Poetry | Submissions</title>
+  <meta name="description" content="Share your poem in a gentle, welcoming space and read community submissions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="submissions">
+
+  <nav class="site-nav">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="Safe Space Poetry Logo" loading="lazy"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="poems.html">Poems</a></li>
+      <li><a href="submissions.html" class="active">Submissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="submissions-hero">
+    <div class="hero-content">
+      <h1>This is your safe space.</h1>
+      <p>Share your words, your heart, your journey.</p>
+      <p class="sub-tagline">Every poem here has a place, every feeling is valid.</p>
+    </div>
+    <img src="images/hero-line-art.png" alt="Line-art writer illustration" class="hero-image" loading="lazy">
+  </header>
+
+  <section class="submission-wrap">
+    <p id="submission-mood-quote" class="submission-mood-quote">Choose a mood and let your words settle in.</p>
+
+    <form id="submission-form" class="submission-form">
+      <h2>Share Your Poem</h2>
+
+      <label for="submission-name">Name or Nickname (optional)</label>
+      <input type="text" id="submission-name" name="name" placeholder="Your name or nickname">
+
+      <label for="submission-country">Country</label>
+      <input type="text" id="submission-country" name="country" required placeholder="Where are you writing from?">
+
+      <label for="submission-mood">Mood</label>
+      <select id="submission-mood" name="mood" required>
+        <option value="" selected disabled>Select a mood</option>
+        <option value="healing">Healing</option>
+        <option value="faith">Faith</option>
+        <option value="growth">Growth</option>
+        <option value="love">Love</option>
+        <option value="loneliness">Loneliness</option>
+        <option value="reflection">Reflection</option>
+      </select>
+
+      <label for="submission-title">Title</label>
+      <input type="text" id="submission-title" name="title" required placeholder="Title of your poem">
+
+      <label for="submission-text">Poem Text</label>
+      <textarea id="submission-text" name="text" rows="8" required placeholder="Type your heart here. No judgment, just space."></textarea>
+
+      <button type="submit" class="submission-btn">Share Your Words</button>
+    </form>
+  </section>
+
+  <section class="submissions-library">
+    <h2>Living Library</h2>
+    <div id="submissions-grid" class="submissions-grid"></div>
+  </section>
+
+  <div class="submission-modal" id="submission-modal">
+    <div class="submission-modal-content">
+      <span class="close-modal" id="submission-close-modal">&times;</span>
+      <p id="submission-modal-meta" class="submission-modal-meta"></p>
+      <h3 id="submission-modal-title"></h3>
+      <p id="submission-modal-date" class="submission-modal-date"></p>
+      <p id="submission-modal-text" class="submission-modal-text"></p>
+      <button id="submission-modal-heart" class="submission-heart" type="button">Heart</button>
+    </div>
+  </div>
+
+  <section class="submission-note">
+    <p>Thank you for trusting this space with your words. Every poem shared here adds life, hope, and connection.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Lesedi Pride Iketleng | Safe Space Poetry</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>

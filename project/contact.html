@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Space Poetry | Contact</title>
+  <meta name="description" content="Reach out to Safe Space Poetry for support messages, donations, and special requests.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="contact">
+
+  <nav class="site-nav">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="Safe Space Poetry Logo"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="poems.html">Poems</a></li>
+      <li><a href="submissions.html">Submissions</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="contact-hero">
+    <div class="hero-content">
+      <h1>Reach Out</h1>
+      <p>If you want someone to hear you, request something, or support this space, you're in the right place. You are safe here.</p>
+      <p class="contact-tagline">Every message in this space is handled with care.</p>
+    </div>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-card contact-card-friend">
+      <p class="contact-icon">Talk</p>
+      <h2>Talk to a Friend</h2>
+      <p>Need someone to listen? Share what's on your heart here. Every message is heard and valued.</p>
+
+      <form class="contact-form" action="#" method="post" data-confirm="Thank you for sharing. Your message has landed softly here.">
+        <label for="friend-name">Name (optional)</label>
+        <input type="text" id="friend-name" name="friend-name" placeholder="Name or nickname">
+
+        <label for="friend-email">Email (optional)</label>
+        <input type="email" id="friend-email" name="friend-email" placeholder="name@example.com">
+
+        <label class="required" for="friend-message">Message</label>
+        <textarea class="required-input" id="friend-message" name="friend-message" rows="5" required placeholder="Share what is on your heart."></textarea>
+
+        <button type="submit">Send Message</button>
+        <p class="micro-text">Your words are safe here.</p>
+      </form>
+    </section>
+
+    <section class="contact-card alt contact-card-support">
+      <p class="contact-icon">Give</p>
+      <h2>Support This Space</h2>
+      <p>If you'd like to help keep this sanctuary alive, contributions are appreciated.</p>
+
+      <form class="contact-form donation-form" action="#" method="post" data-confirm="Your support was received with gratitude. This safe space grows because of hearts like yours.">
+        <label for="donation-link">Donation Link or Platform</label>
+        <input type="url" id="donation-link" name="donation-link" placeholder="https://your-donation-link.com">
+
+        <label class="checkbox-row" for="recurring-donation">
+          <input type="checkbox" id="recurring-donation" name="recurring-donation">
+          Recurring donation
+        </label>
+
+        <label class="checkbox-row" for="one-time-donation">
+          <input type="checkbox" id="one-time-donation" name="one-time-donation">
+          One-time donation
+        </label>
+
+        <button type="submit">Donate</button>
+        <p class="micro-text">Every contribution helps continue this safe space.</p>
+        <p class="micro-text">Donation links will be available soon.</p>
+      </form>
+    </section>
+
+    <section class="contact-card contact-card-request">
+      <p class="contact-icon">Create</p>
+      <h2>Request Something Special</h2>
+      <p>Need a custom poem, guidance, or a collaboration? Let me know what you're hoping for.</p>
+
+      <form class="contact-form" action="#" method="post" data-confirm="Your request has been received. I will hold it with care and return with words soon.">
+        <label for="request-name">Name (optional)</label>
+        <input type="text" id="request-name" name="request-name" placeholder="Your name">
+
+        <label class="required" for="request-email">Email</label>
+        <input class="required-input" type="email" id="request-email" name="request-email" required placeholder="name@example.com">
+
+        <label class="required" for="request-type">Request Type</label>
+        <select class="required-input" id="request-type" name="request-type" required>
+          <option value="" selected disabled>Select request type</option>
+          <option value="custom-poem">Custom Poem</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="advice">Advice</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label class="required" for="request-message">Message</label>
+        <textarea class="required-input" id="request-message" name="request-message" rows="5" required placeholder="Tell me what you have in mind."></textarea>
+
+        <button type="submit">Send Request</button>
+      </form>
+    </section>
+  </main>
+
+  <div class="contact-confirmation" id="contact-confirmation" aria-live="polite" aria-hidden="true">
+    <div class="contact-confirmation-card">
+      <h3>Received, gently.</h3>
+      <p id="contact-confirmation-text">Your words have arrived safely.</p>
+      <button type="button" id="contact-confirmation-close">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Lesedi Pride Iketleng | Safe Space Poetry</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>

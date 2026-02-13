@@ -1,158 +1,25 @@
 /* ================================
-   Home Page Styles
+   Global + Shared
 ================================ */
-body.home {
+body.home,
+body.about,
+body.poems,
+body.submissions,
+body.contact {
   margin: 0;
   font-family: Inter, sans-serif;
   background-color: #ebebeb;
   color: #787775;
 }
-/* Fade-out effect for the whole page */
+
 body.fade-out {
   opacity: 0;
-  transition: opacity 3s ease; /* matches music fade duration */
+  transition: opacity 2.4s ease;
 }
 
-
-header.home {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-              url("images/hero.jpg") center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-}
-
-.hero-content h1 {
-  font-family: Playfair Display, serif;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
-
-.hero-content button {
-  background-color: #c4b3a9;
-  color: #787775;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-  transition: transform 0.2s;
-}
-
-.hero-content button:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 { font-size: 2.2rem; }
-  .hero-content p { font-size: 1.1rem; }
-  .hero-content button { padding: 0.6rem 1.2rem; }
-}
-
-/* ================================
-   Home Page Styles & Animations
-================================ */
-
-header.home {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-              url("../images/hero.jpg") center / cover no-repeat;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Moving gradient overlay for soft animation */
-header.home::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(120deg, rgba(196,179,169,0.2), rgba(225,226,230,0.2), rgba(196,179,169,0.2));
-  animation: moveBackground 30s linear infinite;
-  z-index: 0;
-}
-
-/* Ensure poem content is above overlay */
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-/* Fade-in and floating for poem title & text */
-.hero-content h1,
-.hero-content p {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards, float 6s ease-in-out infinite;
-}
-
-/* Delay text so it appears slightly after title */
-.hero-content p {
-  animation-delay: 0.3s, 0s;
-}
-
-/* Fade-in keyframes */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Floating effect keyframes */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-/* Button hover effect */
-.hero-content button {
-  margin-top: 2rem;
-  background-color: #c4b3a9;
-  color: #787775;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.hero-content button:hover {
-  transform: scale(1.08);
-  background-color: #bfa49b;
-}
-
-/* Background animation keyframes */
-@keyframes moveBackground {
-  0% { transform: rotate(0deg) translate(0, 0); }
-  50% { transform: rotate(180deg) translate(20px, 20px); }
-  100% { transform: rotate(360deg) translate(0, 0); }
-}
-
-
-
-/* ================================
-   About Page Styles
-================================ */
 body.about {
-  margin: 0;
-  font-family: Inter, sans-serif;
-  background-color: #ebebeb;
-  color: #787775;
+  animation: pageFadeIn 1.6s ease both;
+  position: relative;
 }
 
 .site-nav {
@@ -171,8 +38,8 @@ body.about {
 }
 
 .logo img {
-    width: 90px;  
-    height: auto;   
+  width: 90px;
+  height: auto;
 }
 
 .site-nav ul {
@@ -193,15 +60,59 @@ body.about {
   border-bottom: 2px solid #787775;
 }
 
-/* HERO SECTION */
-.about-hero {
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #c4b3a9;
+  color: #787775;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #787775;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #5f5e5c;
+}
+
+/* ================================
+   Home Page
+================================ */
+header.home {
+  height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 4rem 2rem;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../images/hero-about.jpg') center / cover no-repeat;
+  text-align: center;
   color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/hero.jpg") center / cover no-repeat;
   position: relative;
+  overflow: hidden;
+}
+
+header.home::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(196, 179, 169, 0.2),
+    rgba(225, 226, 230, 0.2),
+    rgba(196, 179, 169, 0.2)
+  );
+  animation: moveBackground 30s linear infinite;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
@@ -211,8 +122,51 @@ body.about {
 }
 
 .hero-content p {
-  font-family: Dancing Script, cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content h1,
+.hero-content p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards, float 6s ease-in-out infinite;
+}
+
+.hero-content p {
+  animation-delay: 0.3s, 0s;
+}
+
+.hero-content button {
+  margin-top: 2rem;
+  background-color: #c4b3a9;
+  color: #787775;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+  transform: scale(1.08);
+  background-color: #bfa49b;
+}
+
+/* ================================
+   About + Poems Shared Hero
+================================ */
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/hero-about.jpg") center / cover no-repeat;
+  color: #fff;
+  position: relative;
 }
 
 .hero-image {
@@ -220,7 +174,128 @@ body.about {
   height: auto;
 }
 
-/* INTRO SECTION */
+/* ================================
+   About Page
+================================ */
+.about-butterflies {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+  overflow: hidden;
+}
+
+.butterfly {
+  position: absolute;
+  width: 44px;
+  height: 32px;
+  transform-origin: center;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.2));
+}
+
+.wing {
+  position: absolute;
+  top: 2px;
+  width: 18px;
+  height: 24px;
+  background: linear-gradient(152deg, #c4b3a9 8%, #e1e2e6 56%, #d2c7bf 100%);
+  border: 1px solid rgba(120, 119, 117, 0.26);
+  clip-path: polygon(52% 0%, 100% 23%, 92% 74%, 48% 100%, 0% 78%, 6% 24%);
+}
+
+.wing::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 13px;
+  height: 14px;
+  background: linear-gradient(160deg, rgba(196, 179, 169, 0.85), rgba(225, 226, 230, 0.75));
+  border: 1px solid rgba(120, 119, 117, 0.2);
+  border-radius: 70% 60% 80% 40%;
+}
+
+.wing::after {
+  content: "";
+  position: absolute;
+  inset: 1px 2px;
+  background: repeating-linear-gradient(
+    120deg,
+    rgba(120, 119, 117, 0.05) 0 2px,
+    rgba(120, 119, 117, 0.16) 2px 3px,
+    transparent 3px 6px
+  );
+  opacity: 0.46;
+  border-radius: 60% 45% 70% 55%;
+}
+
+.wing-left {
+  left: 2px;
+  transform-origin: right center;
+  border-radius: 80% 45% 70% 55%;
+  animation: flapLeft 0.7s ease-in-out infinite;
+}
+
+.wing-left::before {
+  left: 1px;
+  transform: rotate(-8deg);
+}
+
+.wing-right {
+  right: 2px;
+  transform-origin: left center;
+  border-radius: 45% 80% 55% 70%;
+  animation: flapRight 0.7s ease-in-out infinite;
+}
+
+.wing-right::before {
+  right: 1px;
+  transform: rotate(8deg);
+}
+
+.butterfly .body {
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  width: 5px;
+  height: 23px;
+  background: linear-gradient(#6e6d6b, #8c8b88, #6b6a68);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transform: translateX(-50%);
+}
+
+.butterfly .body::before,
+.butterfly .body::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background: #787775;
+  top: -3px;
+}
+
+.butterfly .body::before {
+  left: -7px;
+  transform: rotate(-28deg);
+}
+
+.butterfly .body::after {
+  right: -7px;
+  transform: rotate(28deg);
+}
+
+.butterfly-a {
+  top: 14vh;
+  left: -8vw;
+  animation: butterflyPathA 34s ease-in-out infinite;
+}
+
+.butterfly-b {
+  top: 72vh;
+  left: 102vw;
+  animation: butterflyPathB 38s ease-in-out infinite;
+}
+
 .intro {
   display: flex;
   align-items: center;
@@ -249,7 +324,17 @@ body.about {
   border-radius: 10px;
 }
 
-/* FUN FACTS */
+.intro-figure {
+  margin: 0;
+  text-align: center;
+}
+
+.intro-figure figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+  color: #6f6e6c;
+}
+
 .fun-facts {
   background-color: #e1e2e6;
   padding: 3rem 2rem;
@@ -277,7 +362,6 @@ body.about {
   font-weight: 500;
 }
 
-/* VISION SECTION */
 .vision {
   padding: 3rem 2rem;
   text-align: center;
@@ -310,17 +394,640 @@ body.about {
   background-color: #bfa49b;
 }
 
-/* FOOTER */
-footer {
+/* ================================
+   Poems Page
+================================ */
+.poem-filters {
   padding: 2rem;
   text-align: center;
-  background-color: #c4b3a9;
-  color: #787775;
-  margin-top: 2rem;
 }
 
-/* Responsive */
+.poem-moods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.poem-moods button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #c4b3a9;
+  color: #787775;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.poem-moods button.active,
+.poem-moods button:hover {
+  background-color: #bfa49b;
+  transform: scale(1.05);
+}
+
+.motivational-quote {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #787775;
+}
+
+.poems-grid {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.poem-card {
+  background-color: #e1e2e6;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.poem-card.left {
+  text-align: left;
+}
+
+.poem-card.right {
+  text-align: right;
+}
+
+.poem-card h3 {
+  font-family: Playfair Display, serif;
+  margin-bottom: 0.5rem;
+}
+
+.poem-card p {
+  margin: 0.3rem 0;
+}
+
+.poem-card .read-more {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  background-color: #c4b3a9;
+  color: #787775;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.poem-card .read-more:hover {
+  background-color: #bfa49b;
+  transform: scale(1.05);
+}
+
+.poem-card .mood {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #787775;
+  margin-top: 0.5rem;
+}
+
+.poem-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.heart {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #787775;
+  transition: transform 0.2s, color 0.2s;
+  margin-top: 1rem;
+}
+
+.heart.liked {
+  color: #c4b3a9;
+  transform: scale(1.2);
+}
+
+/* ================================
+   Submissions Page
+================================ */
+.submissions-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)),
+    radial-gradient(circle at 20% 25%, rgba(196, 179, 169, 0.4), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(225, 226, 230, 0.35), transparent 45%),
+    url("../images/hero-about.jpg") center / cover no-repeat;
+}
+
+.sub-tagline {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  opacity: 0.95;
+}
+
+.submission-wrap {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.submission-mood-quote {
+  text-align: center;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: #787775;
+  opacity: 0.9;
+}
+
+.submission-form {
+  background: #f4f2f0;
+  border: 1px solid rgba(120, 119, 117, 0.18);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+.submission-form h2 {
+  font-family: Playfair Display, serif;
+  margin: 0 0 0.5rem;
+}
+
+.submission-form label {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.submission-form input,
+.submission-form select,
+.submission-form textarea {
+  width: 100%;
+  border: 1px solid rgba(120, 119, 117, 0.3);
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  color: #4e4d4b;
+  background: #fff;
+}
+
+.submission-form textarea {
+  resize: vertical;
+}
+
+.submission-btn {
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #c4b3a9;
+  color: #787775;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submission-btn:hover {
+  background: #bfa49b;
+  transform: translateY(-1px);
+}
+
+.submissions-library {
+  padding: 1rem 2rem 2rem;
+}
+
+.submissions-library h2 {
+  font-family: Playfair Display, serif;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.submissions-grid {
+  max-height: 620px;
+  overflow-y: auto;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.submission-card {
+  background-color: #e1e2e6;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.submission-card.left {
+  text-align: left;
+}
+
+.submission-card.right {
+  text-align: right;
+}
+
+.submission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.09);
+}
+
+.submission-meta {
+  margin: 0.3rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #787775;
+}
+
+.submission-title {
+  font-family: Playfair Display, serif;
+  margin-bottom: 0.5rem;
+}
+
+.submission-snippet {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.submission-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1100;
+}
+
+.submission-modal-content {
+  background: #f5f5f5;
+  width: min(680px, 92%);
+  max-height: 82vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 1.4rem;
+  position: relative;
+  animation: fadeInUp 0.25s ease;
+}
+
+.submission-modal-meta,
+.submission-modal-date {
+  margin: 0.25rem 0;
+  color: #6f6e6c;
+  font-size: 0.9rem;
+}
+
+.submission-modal-text {
+  white-space: pre-line;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+}
+
+.submission-heart {
+  margin-top: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  background: #e1e2e6;
+  color: #787775;
+  cursor: pointer;
+}
+
+.submission-heart.liked {
+  background: #c4b3a9;
+  color: #fff;
+}
+
+.submission-note {
+  padding: 0.5rem 2rem 1.5rem;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.3rem;
+}
+
+/* ================================
+   Contact Page
+================================ */
+.contact-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5.5rem 2rem 5rem;
+  text-align: center;
+  color: #fff;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(196, 179, 169, 0.45), transparent 38%),
+    radial-gradient(circle at 88% 75%, rgba(225, 226, 230, 0.38), transparent 44%),
+    linear-gradient(rgba(38, 33, 29, 0.28), rgba(38, 33, 29, 0.2)),
+    url("../images/hero-about.jpg") center / cover no-repeat;
+}
+
+.contact-hero::before,
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(225, 226, 230, 0.25);
+  filter: blur(2px);
+  animation: float 9s ease-in-out infinite;
+}
+
+.contact-hero::before {
+  width: 170px;
+  height: 170px;
+  top: -35px;
+  right: 12%;
+}
+
+.contact-hero::after {
+  width: 120px;
+  height: 120px;
+  bottom: -26px;
+  left: 14%;
+  animation-delay: 0.7s;
+}
+
+.contact-hero .hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.contact-hero .hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 0.75rem;
+}
+
+.contact-hero .hero-content p {
+  margin: 0 auto;
+  max-width: 760px;
+  font-size: 1.28rem;
+}
+
+.contact-tagline {
+  margin-top: 1rem;
+  font-family: Inter, sans-serif;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  opacity: 0.92;
+}
+
+.contact-main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.25rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.contact-card {
+  position: relative;
+  background: linear-gradient(150deg, #c4b3a9, #cfbfb6);
+  border: 1px solid rgba(120, 119, 117, 0.22);
+  border-radius: 16px;
+  padding: 1.6rem;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.09);
+}
+
+.contact-card-friend {
+  grid-column: 1 / -1;
+}
+
+.contact-card.alt {
+  background: linear-gradient(150deg, #e1e2e6, #ececf0);
+}
+
+.contact-card h2 {
+  font-family: Playfair Display, serif;
+  margin: 0.2rem 0 0.45rem;
+  font-size: 1.85rem;
+  color: #5f5e5c;
+}
+
+.contact-card > p {
+  margin: 0 0 0.6rem;
+  line-height: 1.55;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.95rem;
+}
+
+.contact-form label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #5f5e5c;
+}
+
+.contact-form label.required {
+  margin-top: 0.32rem;
+}
+
+.contact-form label.required::after {
+  content: " *";
+  color: #8f6f63;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  border: 1px solid rgba(120, 119, 117, 0.28);
+  border-radius: 10px;
+  padding: 0.75rem 0.78rem;
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  color: #4e4d4b;
+  background-color: rgba(255, 255, 255, 0.96);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .required-input {
+  margin-bottom: 0.45rem;
+  border-width: 2px;
+  border-color: rgba(191, 164, 155, 0.62);
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: #bfa49b;
+  box-shadow: 0 0 0 2px rgba(196, 179, 169, 0.25);
+  outline: none;
+}
+
+.contact-form button {
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.25rem;
+  background: #c4b3a9;
+  color: #787775;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #bfa49b;
+  transform: translateY(-2px);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.checkbox-row input {
+  width: auto;
+  margin: 0;
+}
+
+.micro-text {
+  margin: 0.2rem 0 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.16rem;
+  color: #5f5e5c;
+}
+
+.contact-confirmation {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(31, 27, 24, 0.35);
+  backdrop-filter: blur(4px);
+  z-index: 1200;
+}
+
+.contact-confirmation.show {
+  display: flex;
+}
+
+.contact-confirmation-card {
+  width: min(460px, 92%);
+  background: #f5f3f1;
+  border: 1px solid rgba(120, 119, 117, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
+  padding: 1.4rem 1.3rem;
+  text-align: center;
+  animation: fadeInUp 0.24s ease;
+}
+
+.contact-confirmation-card h3 {
+  margin: 0;
+  font-family: Playfair Display, serif;
+  color: #5f5e5c;
+}
+
+.contact-confirmation-card p {
+  margin: 0.7rem 0 1rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.25rem;
+  color: #666562;
+}
+
+.contact-confirmation-card button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  background: #c4b3a9;
+  color: #787775;
+  cursor: pointer;
+}
+
+/* ================================
+   Responsive
+================================ */
 @media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-content button {
+    padding: 0.6rem 1.2rem;
+  }
+
   .about-hero {
     flex-direction: column;
     text-align: center;
@@ -334,146 +1041,200 @@ footer {
   .intro-image {
     margin-top: 2rem;
   }
-}
 
-/* POEMS PAGE */
-.poems-grid {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.poems-grid h2 {
-  font-family: Playfair Display, serif;
-  margin-bottom: 2rem;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.poem-card {
-  background-color: #e1e2e6;
-  width: 220px;
-  padding: 1rem;
-  text-align: left;
-  border: 1px solid #c4b3a9;
-  cursor: pointer;
-  position: relative;
-}
-
-.poem-card h3 {
-  font-family: Playfair Display, serif;
-  margin-bottom: 0.5rem;
-}
-
-.poem-preview {
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.poem-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.75rem;
-  align-items: center;
-}
-
-.poem-buttons button,
-.poem-buttons .heart,
-.poem-buttons .share-btn {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.poem-buttons .heart {
-  color: #787775;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.poem-buttons .heart.liked {
-  color: red;
-}
-
-.poem-buttons .share-btn {
-  color: #787775;
-}
-
-.poem-buttons .read-more-btn {
-  font-size: 0.9rem;
-  color: #c4b3a9;
-  border: 1px solid #c4b3a9;
-  padding: 0.3rem 0.6rem;
-  border-radius: 3px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.poem-buttons .read-more-btn:hover {
-  background-color: #c4b3a9;
-  color: #fff;
-}
-
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 2rem;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 5px;
-  position: relative;
-}
-
-.modal-content h3 {
-  font-family: Playfair Display, serif;
-  margin-bottom: 1rem;
-}
-
-.modal-content p {
-  line-height: 1.6;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: #c4b3a9;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* FOOTER FIX */
-footer {
-  padding: 2rem;
-  text-align: center;
-  background-color: #c4b3a9;
-  color: #787775;
-  margin-top: 2rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .grid {
+  .site-nav {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+  }
+
+  .submissions-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .submission-wrap,
+  .submissions-library {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contact-main {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .contact-card-friend {
+    grid-column: auto;
+  }
+
+  .contact-hero {
+    padding: 4.6rem 1rem 4rem;
+  }
+
+  .contact-hero .hero-content p {
+    font-size: 1.08rem;
+  }
+
+  .about-butterflies {
+    opacity: 0.72;
+  }
+}
+
+/* ================================
+   Animations
+================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(180deg) translate(20px, 20px);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(0, 0);
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flapLeft {
+  0%,
+  100% {
+    transform: rotate(-6deg) scaleX(1);
+  }
+
+  50% {
+    transform: rotate(14deg) scaleX(0.74);
+  }
+}
+
+@keyframes flapRight {
+  0%,
+  100% {
+    transform: rotate(6deg) scaleX(1);
+  }
+
+  50% {
+    transform: rotate(-14deg) scaleX(0.74);
+  }
+}
+
+@keyframes butterflyBob {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -2px;
+  }
+}
+
+@keyframes butterflyPathA {
+  0% {
+    transform: translate(0, 0) rotate(10deg);
+  }
+
+  18% {
+    transform: translate(10vw, 1vh) rotate(-2deg);
+  }
+
+  24% {
+    transform: translate(14vw, 2vh) rotate(1deg);
+  }
+
+  34% {
+    transform: translate(14vw, 2vh) rotate(1deg);
+  }
+
+  46% {
+    transform: translate(30vw, 10vh) rotate(-6deg);
+  }
+
+  58% {
+    transform: translate(44vw, 18vh) rotate(5deg);
+  }
+
+  72% {
+    transform: translate(61vw, 26vh) rotate(-8deg);
+  }
+
+  86% {
+    transform: translate(82vw, 12vh) rotate(7deg);
+  }
+
+  100% {
+    transform: translate(114vw, 4vh) rotate(12deg);
+  }
+}
+
+@keyframes butterflyPathB {
+  0% {
+    transform: translate(0, 0) rotate(-10deg);
+  }
+
+  16% {
+    transform: translate(-11vw, -8vh) rotate(7deg);
+  }
+
+  30% {
+    transform: translate(-21vw, -16vh) rotate(-5deg);
+  }
+
+  40% {
+    transform: translate(-24vw, -17vh) rotate(0deg);
+  }
+
+  52% {
+    transform: translate(-24vw, -17vh) rotate(0deg);
+  }
+
+  64% {
+    transform: translate(-42vw, -6vh) rotate(8deg);
+  }
+
+  78% {
+    transform: translate(-60vw, 2vh) rotate(-6deg);
+  }
+
+  90% {
+    transform: translate(-79vw, -10vh) rotate(6deg);
+  }
+
+  100% {
+    transform: translate(-114vw, -30vh) rotate(11deg);
   }
 }

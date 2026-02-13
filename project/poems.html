@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Safe Space Poetry | Poems</title>
-  <meta name="description" content="Browse a curated collection of poems by Lesedi Pride Iketleng, each exploring emotions and reflection.">
+  <meta name="description" content="A curated collection of poems by Lesedi Pride Iketleng. Browse by mood, read full poems, and find a safe space to feel.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
@@ -12,9 +12,8 @@
 </head>
 <body class="poems">
 
-  <!-- NAVIGATION -->
   <nav class="site-nav">
-    <a href="index.html" class="logo"><img src="images/logo.png" alt="Safe Space Poetry Logo"></a>
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="Safe Space Poetry Logo" loading="lazy"></a>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -24,175 +23,46 @@
     </ul>
   </nav>
 
-  <!-- HERO SECTION -->
   <header class="about-hero">
     <div class="hero-content">
-      <h1>Welcome to My Poetry Collection</h1>
-      <p>Step into a library of emotions, words, and reflection.</p>
+      <h1>Poetry Library</h1>
+      <p>A curated collection of feelings, reflections, and moments captured in words.</p>
     </div>
-    <img src="images/hero-line-art.png" alt="Symbolic line art of Lesedi" class="hero-image">
+    <img src="images/hero-line-art.png" alt="Symbolic line art" class="hero-image" loading="lazy">
   </header>
 
-  <!-- POEMS GRID -->
-  <section class="poems-grid">
-    <h2>Explore Poems</h2>
-    <div class="grid">
-
-      <!-- Poem Card 1 -->
-      <div class="poem-card">
-        <h3>Breathing Room</h3>
-        <p class="poem-preview">
-          You are allowed to rest here. Breathe in the quiet, let the world pause for you. <span class="dots">...</span>
-        </p>
-        <div class="poem-buttons">
-          <button class="read-more-btn" data-poem="poem1">Read More</button>
-          <span class="heart">&#9825;</span>
-          <button class="share-btn">Share</button>
-        </div>
-      </div>
-
-      <!-- Poem Card 2 -->
-      <div class="poem-card">
-        <h3>Still Here</h3>
-        <p class="poem-preview">
-          Survival is a quiet form of courage. You endure, you rise, even when no one notices. <span class="dots">...</span>
-        </p>
-        <div class="poem-buttons">
-          <button class="read-more-btn" data-poem="poem2">Read More</button>
-          <span class="heart">&#9825;</span>
-          <button class="share-btn">Share</button>
-        </div>
-      </div>
-
-      <!-- Poem Card 3 -->
-      <div class="poem-card">
-        <h3>Soft Rain</h3>
-        <p class="poem-preview">
-          Even storms know when to be gentle. Tears fall quietly, but wash away pain. <span class="dots">...</span>
-        </p>
-        <div class="poem-buttons">
-          <button class="read-more-btn" data-poem="poem3">Read More</button>
-          <span class="heart">&#9825;</span>
-          <button class="share-btn">Share</button>
-        </div>
-      </div>
-
-      <!-- Poem Card 4 -->
-      <div class="poem-card">
-        <h3>Hidden Hope</h3>
-        <p class="poem-preview">
-          Hope does not shout; it waits in the quiet corners of your heart. <span class="dots">...</span>
-        </p>
-        <div class="poem-buttons">
-          <button class="read-more-btn" data-poem="poem4">Read More</button>
-          <span class="heart">&#9825;</span>
-          <button class="share-btn">Share</button>
-        </div>
-      </div>
-
-      <!-- Poem Card 5 -->
-      <div class="poem-card">
-        <h3>Quiet Strength</h3>
-        <p class="poem-preview">
-          Soft hearts endure the longest. There is power in calm resilience, in unspoken love. <span class="dots">...</span>
-        </p>
-        <div class="poem-buttons">
-          <button class="read-more-btn" data-poem="poem5">Read More</button>
-          <span class="heart">&#9825;</span>
-          <button class="share-btn">Share</button>
-        </div>
-      </div>
-
+  <section class="poem-filters">
+    <div class="poem-moods">
+      <button data-mood="all" class="active">All</button>
+      <button data-mood="healing">Healing</button>
+      <button data-mood="faith">Faith</button>
+      <button data-mood="growth">Growth</button>
+      <button data-mood="love">Love</button>
+      <button data-mood="loneliness">Loneliness</button>
+      <button data-mood="reflection">Reflection</button>
+      <button data-mood="joy">Joy</button>
     </div>
+    <p id="motivational-quote" class="motivational-quote">Every feeling has its space.</p>
   </section>
 
-  <!-- POEM MODALS -->
-  <div class="modal" id="poem1">
+  <section class="poems-grid" id="poems-grid"></section>
+
+  <div class="poem-modal" id="poem-modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Breathing Room</h3>
-      <p>
-        You are allowed to rest here.<br>
-        Breathe in the quiet, let the world pause for you.<br>
-        Let your shoulders drop, your heart soften.<br>
-        Listen to the whispers of calm in the air.<br>
-        Even the smallest breath is progress.<br>
-        Embrace the pause, honor your space.<br>
-        The world can wait, for now, you breathe.
-      </p>
+      <span class="close-modal" id="close-modal">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-date"></p>
+      <p class="modal-quote" id="modal-quote"></p>
+      <p id="modal-text"></p>
+      <span class="heart" id="modal-heart">&#9829;</span>
     </div>
   </div>
 
-  <div class="modal" id="poem2">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Still Here</h3>
-      <p>
-        Survival is a quiet form of courage.<br>
-        You endure, you rise, even when no one notices.<br>
-        Each day a small victory, each breath a testament.<br>
-        You are enough, even when unseen.<br>
-        The night may whisper doubts, but you are still here.<br>
-        Your persistence writes its own story.<br>
-        Stand tall, your quiet strength is luminous.
-      </p>
-    </div>
-  </div>
-
-  <div class="modal" id="poem3">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Soft Rain</h3>
-      <p>
-        Even storms know when to be gentle.<br>
-        Tears fall quietly, but wash away pain.<br>
-        Raindrops cleanse the earth, and your heart.<br>
-        Embrace the rhythm of renewal.<br>
-        Let the soft rain nurture you.<br>
-        Healing comes in quiet intervals.<br>
-        Your soul is tender, yet unbroken.
-      </p>
-    </div>
-  </div>
-
-  <div class="modal" id="poem4">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Hidden Hope</h3>
-      <p>
-        Hope does not shout; it waits in the quiet corners of your heart.<br>
-        It is the light behind closed eyelids.<br>
-        A whisper when you feel lost.<br>
-        Patience holds it steady.<br>
-        In stillness, you will find it.<br>
-        Let it rise, let it shine, unseen but real.<br>
-        Your hope is resilient, persistent, eternal.
-      </p>
-    </div>
-  </div>
-
-  <div class="modal" id="poem5">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Quiet Strength</h3>
-      <p>
-        Soft hearts endure the longest.<br>
-        There is power in calm resilience, in unspoken love.<br>
-        Gentle hands hold the heaviest burdens.<br>
-        Silence speaks louder than noise.<br>
-        Compassion is a quiet roar.<br>
-        The meek inherit patience, courage, and peace.<br>
-        Stand softly, yet unshakably.<br>
-        Your quiet strength is your armor.
-      </p>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 Lesedi Pride Iketleng | Safe Space Poetry</p>
+    <p><a href="references.html">References</a></p>
   </footer>
 
-  <script src="scripts/poems.js"></script>
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
