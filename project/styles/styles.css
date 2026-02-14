@@ -860,6 +860,26 @@ header.home::before {
   line-height: 1.55;
 }
 
+.contact-card a {
+  color: #5f5e5c;
+  text-decoration: underline;
+  text-decoration-color: #8f7a70;
+  text-underline-offset: 2px;
+}
+
+.contact-card a:hover,
+.contact-card a:focus {
+  color: #3f3e3c;
+  text-decoration-color: #5f5e5c;
+}
+
+.contact-card code {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(120, 119, 117, 0.22);
+  border-radius: 4px;
+  padding: 0.05rem 0.28rem;
+}
+
 .contact-icon {
   display: inline-flex;
   align-items: center;
@@ -1238,3 +1258,5 @@ header.home::before {
     transform: translate(-114vw, -30vh) rotate(11deg);
   }
 }
+
+
